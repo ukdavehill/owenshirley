@@ -188,8 +188,8 @@
 //           }
 //         }  
 
-$primary-color:#81f9e3;
-$secondary-color: #b14a97;
+$primary-color:#e4f751;
+$secondary-color: #55277c;
 $menu-width: 220px;
 
  html {
@@ -330,11 +330,14 @@ $menu-width: 220px;
                     "page-message v-4 v-5"
                     "v-6 v-7 v-8"
                     "v-9 v-10 v-11"
-                    "v-12 v-13 v-14";
+                    "v-12 v-13 v-14"
+                    "v-15 v-16 v-17"
+                    "v-18 v-19 v-20"
+                    "v-21 v-22 v-23"
+                    "v-24 . .";
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: auto;
-        
-        grid-gap: 2px;
+        grid-gap: 5px;
       }
         
         .item {
@@ -365,13 +368,13 @@ $menu-width: 220px;
 
             }
             
-            .icon:hover i{
+            .icon:hover i {
               transform: scale(1.1);
             }
 
         }
         .video {
-          background: aqua;
+          background: grey;
           position: relative;
           height: 0;
           padding-top: 56.25%;
@@ -435,48 +438,31 @@ p {
 
 #page-message {
   grid-area: page-message;
-  background-color: yellow;
+  background-color: #888;
 }
 
-.v-1 {
-  grid-area: v-1;
+#cropped-vid1 {
+  background: #9aa6ea;
 }
 
-.v-2 {
-  grid-area: v-2;
+#cropped-vid8 {
+  background: #8e1c0b;
 }
 
-.v-3 {
-  grid-area: v-3;
+#text-id1 {
+  background-image: url('http://www.rojgaracademy.org/images/NoVideoAvailable.png');
+  background-position: center;
 }
 
-.v-4 {
-  grid-area: v-4;
-}
-.v-5 {
-  grid-area: v-5;
-}
-.v-6 {
-  grid-area: v-6;
-}
-.v-7 {
-  grid-area: v-7;
-}
+$videos: 24;
+@mixin v-x {
+  @for $i from 1 through $videos {
+    .v-#{$i} {
+      grid-area: v-#{$i};
+    }
+  }
+};
+@include v-x;
 
-.v-8 {
-  grid-area: v-8;
-}
-
-.v-9 {
-  grid-area: v-9;
-}
-
-.v-10 {
-  grid-area: v-10;
-}
-
-.v-11 {
-  grid-area: v-11;
-}
 
 

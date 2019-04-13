@@ -7,7 +7,8 @@ const videos = [
         title: "Full audio post-production",
         description: "",
         clientName: "Shunk Films",
-        clientLink: "https://www.shunkfilms.co.uk/"
+        clientLink: "https://www.shunkfilms.co.uk/",
+        id: "cropped-vid1"
     },
     {
         name: "https://player.vimeo.com/video/206720872",
@@ -67,7 +68,8 @@ const videos = [
         title: "Music & Sound Design",
         description: "",
         clientName: "Al Boardman",
-        clientLink: "https://www.alboardman.com/"
+        clientLink: "https://www.alboardman.com/",
+        id: "cropped-vid8"
     },
 
     {
@@ -129,22 +131,83 @@ const videos = [
         clientLink: "http://www.robot-dinosaur.co.uk/"
     },
     {
-        name: "",
+        name: "https://www.youtube.com/embed/Y5ncANXKGwk",
         order: "v-16",
-        title: "",
-        description: "",
-        clientName: "",
-        clientLink: ""
+        title: "Full audio post-production (1/3)",
+        description: "For this series of three short films for Mitie, I worked closely with the Producer, James Sykes, and the Director/Editor, Matthew Freeth. ‘The Penalty’ was nominated for Best Short at the RTS West of England 2016 awards.",
+        clientName: "JS Productions",
+        clientLink: "https://www.jsproductions.tv/"
     },
     {
-        name: "",
+        name: "https://www.youtube.com/embed/6tTZYg-PUw8",
         order: "v-17",
-        title: "",
-        description: "",
-        clientName: "",
-        clientLink: ""
-    }
+        title: "Full audio post-production (2/3)",
+        description: "For this series of three short films for Mitie, I worked closely with the Producer, James Sykes, and the Director/Editor, Matthew Freeth. ‘The Penalty’ was nominated for Best Short at the RTS West of England 2016 awards.",
+        clientName: "JS Productions",
+        clientLink: "https://www.jsproductions.tv/"
+    },
+    {
+        name: "https://www.youtube.com/embed/NXYwbeleKBw",
+        order: "v-18",
+        title: "Full audio post-production (3/3)",
+        description: "For this series of three short films for Mitie, I worked closely with the Producer, James Sykes, and the Director/Editor, Matthew Freeth. ‘The Penalty’ was nominated for Best Short at the RTS West of England 2016 awards.",
+        clientName: "JS Productions",
+        clientLink: "https://www.jsproductions.tv/"
+    },
 
+    {
+        name: "https://www.youtube.com/embed/YlHHTmIkdis",
+        order: "v-19",
+        title: "Sound Design & Track Lay",
+        description: "Working as a <strong>Dubbing Editor</strong> for <a href='http://www.blowoutsound.co.uk/' target='_blank'>Blow Out Sound</a> we provided the track lay for all 6 episodes of the flagship BBC series ‘Life Story’, working closely with the BBC Producers and Dubbing Mixer, Graham Wild.",
+        clientName: "BBC Natural History Unit",
+        clientLink: "https://www.bbcstudios.com/"
+    },
+
+    {
+        name: "https://www.youtube.com/embed/4mHJ_NFJz6M",
+        order: "v-20",
+        title: "Sound Design & Track Lay",
+        description: "I worked as a <strong>Dubbing Editor</strong> on four of the five episodes in the ‘Destination Wild: Brazil’ series, broadcast on <a href='https://www.terramater.at/productions/brazil-a-natural-history/' target='_blank'>National Geographic Wild</a>. Freelancing for <a href='http://www.blowoutsound.co.uk/' target='_blank'>Blow Out Sound</a>, full track lay was provided for Producer Paul Reddish and mixed by Graham Wild at Films at 59.",
+        clientName: "Terra Mater",
+        clientLink: "https://www.terramater.at/productions/brazil-a-natural-history/"
+    },
+    {
+        name: "https://www.youtube.com/embed/msx3BAhIeQg",
+        order: "v-21",
+        title: "Sound Design & Track Lay",
+        description: "Worked as a <strong>Dubbing Editor</strong> for <a href='http://www.blowoutsound.co.uk/' target='_blank'>Blow Out Sound</a> on episode 2 of ‘Dolphins – Spy in the Pod’, assisting Paul Cowgill. <strong>Sound editing and track lay</strong> was carried out in Pro Tools.",
+        clientName: "John Downer Productions",
+        clientLink: "http://jdp.co.uk/"
+    },
+
+    {
+        name: "https://www.youtube.com/embed/bRGNd2uMpJc",
+        order: "v-22",
+        title: "Video Editing, Dubbing & Sound Design",
+        description: "The footage for this trailer was shot in HD on a Canon 5D by <a href='https://www.mattygroves.co.uk/' target='_blank'>Matty Groves</a>. I <strong>cut & graded the footage</strong> in Premiere Pro. A locked edit was then sent to the animator before the sound work was carried out. I <strong>recorded the Voice Over and the cellist</strong> in my home studio. This was <strong>mixed in Pro Tools</strong> along with <strong>sound design</strong>, created from <strong>original FX</strong> and <strong>Foley</strong>.",
+        clientName: "Byron Vincent",
+        clientLink: "https://www.byronvincent.com/"
+    },
+
+    {
+        name: "",
+        order: "v-23",
+        title: "Original Music and Sound Design",
+        description: "For this online marketing ad, I was asked to provide some uplifting <strong>music</strong> and <strong>sound design</strong> to fit the animated video. <strong>Foley</strong> recorded in the studio and <strong>library sounds</strong> were added to a <strong>music track</strong> created in Ableton and mixed together in Pro Tools.",
+        clientName: "Studio Okoku",
+        clientLink: "https://www.okoku.in/",
+        id: "text-id1"
+    },
+
+    {
+        name: "https://www.youtube.com/embed/IDiaKoQzhpg",
+        order: "v-24",
+        title: "Video Editing & Music Production",
+        description: "For this music video, I edited the video using Adobe Premiere Pro CS6, which was shot and directed by <a href='https://www.mattygroves.co.uk/' target='_blank'>Matty Groves</a> & produced the music for <a href='http://canolatenderfoot.co.uk/' target='_blank'>Canola Tenderfoot</a> using Ableton.",
+        clientName: "Slime Recordings",
+        clientLink: "https://slimerecordings.com/"
+    }
 
 ];
 
@@ -164,7 +227,7 @@ function populateVideos() {
         
         <div class="icon"><i class="fas fa-caret-down"></i></div>
         </div>
-        <div class = "video">
+        <div class = "video" id="${video.id}">
             <iframe
                 src="${video.name}"
                 frameborder="0"
