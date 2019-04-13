@@ -183,7 +183,7 @@ const videos = [
 
     {
         name: "https://www.youtube.com/embed/bRGNd2uMpJc",
-        order: "v-22",
+        order: "v-24",
         title: "Video Editing, Dubbing & Sound Design",
         description: "The footage for this trailer was shot in HD on a Canon 5D by <a href='https://www.mattygroves.co.uk/' target='_blank'>Matty Groves</a>. I <strong>cut & graded the footage</strong> in Premiere Pro. A locked edit was then sent to the animator before the sound work was carried out. I <strong>recorded the Voice Over and the cellist</strong> in my home studio. This was <strong>mixed in Pro Tools</strong> along with <strong>sound design</strong>, created from <strong>original FX</strong> and <strong>Foley</strong>.",
         clientName: "Byron Vincent",
@@ -202,7 +202,7 @@ const videos = [
 
     {
         name: "https://www.youtube.com/embed/IDiaKoQzhpg",
-        order: "v-24",
+        order: "v-22",
         title: "Video Editing & Music Production",
         description: "For this music video, I edited the video using Adobe Premiere Pro CS6, which was shot and directed by <a href='https://www.mattygroves.co.uk/' target='_blank'>Matty Groves</a> & produced the music for <a href='http://canolatenderfoot.co.uk/' target='_blank'>Canola Tenderfoot</a> using Ableton.",
         clientName: "Slime Recordings",
