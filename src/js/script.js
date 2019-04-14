@@ -87,7 +87,8 @@ const videos = [
         title: "Full audio post-production",
         description: "For this short, I edited the sync sound, added atmospheres and FX, and mixed with the music cues provided by the composer.",
         clientName: "Jonathan Hardy",
-        clientLink: "http://www.jonathanhardyfilm.com/"
+        clientLink: "http://www.jonathanhardyfilm.com/",
+        id: "cropped-vid10"
     },
 
     {
@@ -241,7 +242,7 @@ function populateVideos() {
         .join("");
 
     videoArea.innerHTML =
-        html + `<div id="page-message"><h3>Welcome to my site</h3></div>`;
+        html + `<div id="page-message"><h3>Welcome to my site...</h3></div>`;
 }
 
 window.onload = function () {
@@ -301,20 +302,32 @@ function getClickedElement(el) {
         toggleVideo = gparent.querySelector('.video');
         toggleActive = parent.querySelector('p');
         toggleIcon = target;
-    };
+    }
+
+    else if (target.matches('#page-message') || target.matches('h3')) {
+        console.log('page-message clicked');
+        toggleItem = false;
+    }
 
 }
 
 videoArea.addEventListener('click', (e) => {
     console.log('clicked element is:')
     console.dir(e.target);
+
+
     getClickedElement(e);
 
-    toggleItem.classList.toggle('item1');
-    toggleText.classList.toggle('text1');
-    toggleVideo.classList.toggle('video1');
-    toggleActive.classList.toggle('active');
-    toggleIcon.classList.toggle('fa-rotate-180');
+
+    if (toggleItem) {
+        toggleItem.classList.toggle('item1');
+        toggleText.classList.toggle('text1');
+        toggleVideo.classList.toggle('video1');
+        toggleActive.classList.toggle('active');
+        toggleIcon.classList.toggle('fa-rotate-180');
+        e.stopPropagation();
+    };
+    // alert("event propagation halted.");
 
 });
 
