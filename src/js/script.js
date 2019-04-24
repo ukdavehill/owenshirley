@@ -224,8 +224,6 @@ function populateVideos() {
         <p>${video.description}
         <br>Client: <a href="${video.clientLink}" target="_blank">${video.clientName}</a>
         </p>
-        
-        
         <div class="icon"><i class="fas fa-caret-down"></i></div>
         </div>
         <div class = "video" id="${video.id}">
@@ -236,8 +234,7 @@ function populateVideos() {
                 allowfullscreen
             ></iframe>
         </div>
-    </div>
-	`;
+    </div>	`
         })
         .join("");
 
@@ -247,7 +244,9 @@ function populateVideos() {
 
 window.onload = function () {
     console.log("starting to populate");
+    console.time('loading page');
     populateVideos();
+    console.timeEnd('loading page');
     console.log("finished");
 };
 
@@ -311,24 +310,92 @@ function getClickedElement(el) {
 
 }
 
+
+
 videoArea.addEventListener('click', (e) => {
     console.log('clicked element is:')
     console.dir(e.target);
 
 
     getClickedElement(e);
+    console.dir(toggleItem);
+
 
 
     if (toggleItem) {
         toggleItem.classList.toggle('item1');
+        // toggleItem.style.minHeight = `${gridHeight}px`;
         toggleText.classList.toggle('text1');
         toggleVideo.classList.toggle('video1');
         toggleActive.classList.toggle('active');
         toggleIcon.classList.toggle('fa-rotate-180');
         e.stopPropagation();
     };
-    // alert("event propagation halted.");
-
 });
 
 
+
+// SET MAX ROW OF DROPDOWN ON ROW
+
+// debounce function from Underscore.js
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+        var context = this, args = arguments;
+        var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+// ADD EVENT LISTENER FOR HAMBURGER MENU
+
+const hamburger = document.querySelector('.hamburger');
+const bars = hamburger.querySelector('.fa-bars');
+const cross = hamburger.querySelector('.fa-times');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const ul = hamburger.querySelector('ul');
+
+bars.addEventListener('click', function () {
+    console.log('hamburger clicked');
+
+    hamburgerMenu.classList.remove('hide-menu');
+    cross.classList.remove('inactive');
+    bars.classList.add('inactive');
+}
+);
+
+cross.addEventListener('click', function () {
+    console.log('cross clicked');
+    hamburgerMenu.classList.add('hide-menu');
+    cross.classList.add('inactive');
+    bars.classList.remove('inactive');
+})
+
+// var gridHeight;
+
+// var setRowHeight = debounce(function () {
+//     var titleBox = document.getElementById('page-message');
+//     console.log('window width is');
+//     console.log(window.innerWidth);
+//     console.log('from event Handler');
+//     console.dir(titleBox);
+//     console.log('box height is: ')
+//     console.log(titleBox.offsetHeight);
+//     console.log('box width is: ')
+//     console.log(titleBox.offsetWidth);
+//     gridHeight = titleBox.offsetHeight;
+// }, 250);
+
+// setMinRowHeight();
+// window.addEventListener('resize', setRowHeight);
+
+
+// console.log("hello titleBox");
+// console.dir(titleBox);
