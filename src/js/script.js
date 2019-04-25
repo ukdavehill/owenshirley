@@ -1,5 +1,5 @@
-const videoArea = document.querySelector(".video-area");
 
+// ===============START-VIDEO LIST====================
 const videos = [
     {
         name: "https://player.vimeo.com/video/294531001",
@@ -212,9 +212,13 @@ const videos = [
 
 ];
 
+// ===============END-VIDEO LIST====================
+
+const videoArea = document.querySelector(".video-area");
 
 
-function populateVideos() {
+
+function populateVideos(pageMessage) {
     var html = videos
         .map(video => {
             return `
@@ -238,14 +242,26 @@ function populateVideos() {
         })
         .join("");
 
+    // add page message to 
     videoArea.innerHTML =
-        html + `<div id="page-message"><h3>Welcome to my site...</h3></div>`;
+        html + `<div id="page-message"><h3>${pageMessage}</h3></div>`;
 }
+
+let welcomeMessage = 'Welcome to my site...';
+// const portfolioMessage = 'This is my portfolio';
+
+
+// If portfolio site clicked, change message:
+// const portfolio = document.getElementById('portfolio');
+// portfolio.addEventListener('click', function () {
+//     welcomeMessage = portfolioMessage;
+//     console.log("PORTFOLIO CLICKED");
+// });
 
 window.onload = function () {
     console.log("starting to populate");
     console.time('loading page');
-    populateVideos();
+    populateVideos(welcomeMessage);
     console.timeEnd('loading page');
     console.log("finished");
 };
@@ -311,7 +327,6 @@ function getClickedElement(el) {
 }
 
 
-
 videoArea.addEventListener('click', (e) => {
     console.log('clicked element is:')
     console.dir(e.target);
@@ -324,7 +339,7 @@ videoArea.addEventListener('click', (e) => {
 
     if (toggleItem) {
         toggleItem.classList.toggle('item1');
-        // toggleItem.style.minHeight = `${gridHeight}px`;
+        // toggleItem.style.height = `${gridHeight}px`;
         toggleText.classList.toggle('text1');
         toggleVideo.classList.toggle('video1');
         toggleActive.classList.toggle('active');
@@ -333,9 +348,9 @@ videoArea.addEventListener('click', (e) => {
     };
 });
 
+// ===================START-SET MAX ROW=======================
 
-
-// SET MAX ROW OF DROPDOWN ON ROW
+// SET MAX ROW HEIGHT OF DROPDOWN ON ROW
 
 // debounce function from Underscore.js
 
@@ -354,6 +369,59 @@ function debounce(func, wait, immediate) {
     };
 };
 
+
+var gridHeight;
+
+const laptopScreen = 1201;
+const tabletScreen = 901;
+const sideMenuWidth = 220;
+const gridGap = 1;
+
+const scrollWidth = 17;
+
+// Height in pixels above each video with title
+const titleHeight = 40;
+
+const videoRatio = 0.5625;
+
+var setRowHeight = debounce(function () {
+    var titleBox = document.getElementById('page-message');
+    const windowWidth = window.innerWidth;
+    var videoWidth;
+    if (windowWidth >= laptopScreen) {
+        videoWidth = (windowWidth - sideMenuWidth - (3 * gridGap) - (2 * scrollWidth)) / 3;
+    } else if (windowWidth >= tabletScreen) {
+        console.log('TABLET WIDTH');
+        // THIS NEEDS ADJUSTING
+        videoWidth = (windowWidth - sideMenuWidth - (2 * scrollWidth) - (2 * gridGap)) / 2;
+    } else {
+        videoWidth = windowWidth - scrollWidth;
+    }
+
+    console.log('window width is');
+    console.log(windowWidth);
+    console.log('box width is: ');
+    console.log(titleBox.offsetWidth);
+
+    console.log('video width is: ');
+    console.log(videoWidth);
+    gridHeight = (videoWidth * videoRatio) + titleHeight;
+    console.log('gridHeight is: ');
+    console.log(gridHeight);
+
+    // const itemSelected = document.querySelectorAll('')
+
+
+}, 250);
+
+setRowHeight();
+window.addEventListener('resize', setRowHeight);
+
+// ===================END-SET MAX ROW=======================
+
+
+
+// =====================START-HAMBURGER================
 // ADD EVENT LISTENER FOR HAMBURGER MENU
 
 const hamburger = document.querySelector('.hamburger');
@@ -378,24 +446,22 @@ cross.addEventListener('click', function () {
     bars.classList.remove('inactive');
 })
 
-// var gridHeight;
+// =====================END-HAMBURGER================
 
-// var setRowHeight = debounce(function () {
-//     var titleBox = document.getElementById('page-message');
-//     console.log('window width is');
-//     console.log(window.innerWidth);
-//     console.log('from event Handler');
-//     console.dir(titleBox);
-//     console.log('box height is: ')
-//     console.log(titleBox.offsetHeight);
-//     console.log('box width is: ')
-//     console.log(titleBox.offsetWidth);
-//     gridHeight = titleBox.offsetHeight;
-// }, 250);
+// =============START-BACKGROUND-COLORCHANGER========
+const menuColor = '#292257';
+const colors = ['#ff0000', '#00ff00', '#0000ff', menuColor];
+const colorsLength = colors.length;
+let counter = 0;
 
-// setMinRowHeight();
-// window.addEventListener('resize', setRowHeight);
+var speaker = document.getElementById('click-color');
 
+// RESEARCH EVENT LISTENERS AND PROPOGATION
+speaker.addEventListener('click', function (e) {
+    var newColor = colors[counter % colorsLength];
+    speaker.style.backgroundColor = newColor;
+    counter++;
+    e.stopPropagation();
+});
 
-// console.log("hello titleBox");
-// console.dir(titleBox);
+// =============START-BACKGROUND-COLORCHANGER========

@@ -1,0 +1,123 @@
+.side-bar {
+    overflow-y: scroll;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    flex-basis: $menu-width;    
+    background-color: $menu-color;
+    // box-shadow: 10px 5px 5px red;
+    // border: $border-width solid black;
+    border-right: none;
+    border-left: none;
+    display: none;
+    grid-template-columns: $menu-width;
+    grid-template-rows: auto 1fr 1fr;
+    // justify-items: stretch;
+    grid-template-areas: 
+    "logo" 
+    "menu"
+    "contact"  ;                 
+    
+    .logo {
+        grid-area: logo;
+        // opacity: 0.5;
+
+        img {
+            height: auto;
+            width: $menu-width;
+        }
+        // ASK OWEN ABOUT THIS...
+        // img:hover {
+        //   transform: scale(1.05);
+        //   background-color: red;
+        // }
+
+        
+            
+    }
+
+    .menu {
+        grid-area: menu;
+        font-size: 1.2rem;
+        // border: 2px solid red;
+        align-content: center;
+        display: flex;
+        justify-content: center;
+        ul {
+          // border: 2px solid black;
+          // display: grid;
+          // grid-template-columns: 1fr;
+          // grid-template-rows: repeat(4, 1fr);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 50%;
+        
+        }
+
+        ul > li{
+          list-style: none;
+          border-bottom: 2px solid rgba(0,0,0,0.3);
+          // background: pink;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          
+          span#selected a {
+            color: $drop-down-color;
+          }
+          
+          span a:hover {
+            transform: none;
+            font-weight: normal;
+          }
+          
+          
+          
+          a {
+            text-decoration: none;
+            color: white;
+            } 
+
+            a:hover {
+              transform: scale(1.1);
+              font-weight: bold; 
+            }
+            // color: $primary-color;
+          }
+        }
+    }
+  
+    .contact {
+        grid-area: contact;
+        display: flex;
+        flex-direction: column;
+        
+        
+        .info {
+          display: flex;
+          flex-direction: column;
+          flex: 1 0 100px;
+          justify-content: center;
+          padding: 5px;
+        }
+        .info h4 {
+          font-size: 16px;
+          
+        }
+
+        i {
+          display: inline-block;
+          padding: 5px;
+          font-size: 40px;
+          // opacity: 0.6;
+          transition: 0.8s;
+          color: black;
+          // should do fade
+          &:hover {
+            color: white;
+            opacity: 1;
+            transition: 0.8s;
+          }
+        }
+    }
