@@ -66,10 +66,15 @@
 
         }
         
+        //ASK OWEN ABOUT THIS
         .icon:hover i {
           transform: scale(1.1);
         }
 
+    }
+
+    span.invisible {
+      visibility: hidden;
     }
     .video {
       background: $drop-down-color;
@@ -125,26 +130,26 @@
       margin-top: 6px;
     }
   
-    a {
-      text-decoration: none;
-    }
-    a:link {
-      color: #42b0f4;
-    }
+    // a {
+    //   text-decoration: none;
+    // }
+    // a:link {
+    //   color: #42b0f4;
+    // }
      
-    a:visited {
-      color: #d62a4d;
-    }
+    // a:visited {
+    //   color: #d62a4d;
+    // }
     
    
-    a:hover {
-      color: #840721;
-    }
+    // a:hover {
+    //   color: #840721;
+    // }
     
     
-    a:active {
-      color: black;
-    }
+    // a:active {
+    //   color: black;
+    // }
   }
   
   p {

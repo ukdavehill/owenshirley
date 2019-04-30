@@ -5,13 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Owen Shirley - Music</title>
+    <title>Owen Shirley - Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>My Music</h1>
-    <script src="js/script.js"></script>
+    <div class="hamburger">
+        <i class="fas fa-bars" id="bars"></i><i class="fas fa-times inactive" id="cross"></i>
+    </div>
+    <div class="hamburger-menu hide-menu">
+        <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="index.html">
+                    Portfolio</a> </li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="main-container">
+        <div class="side-bar" id="nav">
+            <div class="logo">
+                <a href="#"><img id="click-color" src="images/OS_speaker_logo.png" alt="Speaker Logo"></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li><span id="selected"><a href="music.html">Music</a></span></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <div class="info">
+                    <!-- <h4>Contact me</h4> -->
+
+                    <p>owengshirley@gmail.com</p>
+                    <p>+44 (0) 7947 576 998 (including WhatsApp)</p>
+                </div>
+
+                <div class="icons">
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-vimeo-v"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-soundcloud"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+        <main id="about">
+
+            <section>
+                <h2>Music</h2>
+                <p>As a recording artist, producer and remixer, my work has been released on a number of independent
+                    record labels around the world, as one half of electronic indie act Canola Tenderfoot and as a
+                    remixer under my nickname Woos.</p>
+                <p>As a musician and DJ, I’ve performed at venues across the UK and Europe.</p>
+                <p>More recently, I have written and produced original music for film and TV and I have works with
+                    publishers <a href="https://hitpointmusic.com/" target="_blank">Hitpoint Music</a> in the UK and <a
+                        href="https://www.musicbed.com/" target="_blank">Musicbed</a> in the US.
+                </p>
+            </section>
+            <div class="soundcloud">
+
+            </div>
+
+        </main>
+    </div>
+
+
+
+    <script src="js/sidenav.js"></script>
 </body>
 
 </html>

@@ -71,16 +71,14 @@
             transform: none;
             font-weight: normal;
           }
-          
-          
-          
+           
           a {
             text-decoration: none;
             color: white;
             } 
 
             a:hover {
-              transform: scale(1.1);
+              transform: scale(1.05);
               font-weight: bold; 
             }
             // color: $primary-color;
@@ -117,7 +115,8 @@
           &:hover {
             color: white;
             opacity: 1;
-            transition: 0.8s;
+            transition: 0.4s;
+            cursor: pointer;
           }
         }
     }
