@@ -1,5 +1,5 @@
 .side-bar {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -64,7 +64,7 @@
           align-items: center;
           
           span#selected a {
-            color: $drop-down-color;
+            color: blue;
           }
           
           span a:hover {
@@ -74,7 +74,7 @@
            
           a {
             text-decoration: none;
-            color: white;
+            color: black;
             } 
 
             a:hover {
@@ -107,7 +107,7 @@
         i {
           display: inline-block;
           padding: 5px;
-          font-size: 40px;
+          font-size: 30px;
           // opacity: 0.6;
           transition: 0.8s;
           color: black;

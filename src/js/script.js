@@ -1,5 +1,6 @@
-
 // ===============START-VIDEO LIST====================
+const welcomeMessage = 'OWEN SHIRLEY AUDIO';
+
 const videos = [
     {
         name: "https://player.vimeo.com/video/294531001",
@@ -247,7 +248,7 @@ function populateVideos(pageMessage) {
         html + `<div id="page-message"><h3>${pageMessage}</h3></div>`;
 }
 
-let welcomeMessage = 'Welcome to my site...';
+// const welcomeMessage = 'Welcome to my site...';
 // const portfolioMessage = 'This is my portfolio';
 
 
@@ -340,6 +341,12 @@ videoArea.addEventListener('click', (e) => {
     if (toggleItem) {
         toggleItem.classList.toggle('item1');
         // toggleItem.style.height = `${gridHeight}px`;
+        // if (resizeCount < 3) {
+        //     toggleItem.style.height = `${gridHeight}px`;
+        // } else {
+        //     toggleItem.style.height = `auto`;
+        //     // toggleItem.classList.toggle('item1');
+        // }
         toggleText.classList.toggle('text1');
         toggleVideo.classList.toggle('video1');
         toggleActive.classList.toggle('active');
@@ -369,7 +376,7 @@ function debounce(func, wait, immediate) {
     };
 };
 
-
+var resizeCount = 0;
 var gridHeight;
 
 const laptopScreen = 1201;
@@ -408,16 +415,21 @@ var setRowHeight = debounce(function () {
     gridHeight = (videoWidth * videoRatio) + titleHeight;
     console.log('gridHeight is: ');
     console.log(gridHeight);
+    resizeCount++;
 
     // const itemSelected = document.querySelectorAll('')
 
 
 }, 250);
 
+function makeAuto() {
+
+}
+
 setRowHeight();
 window.addEventListener('resize', setRowHeight);
 
-// ===================END-SET MAX ROW=======================
+// ===================END-SET MAX ROW==============
 
 
 
@@ -464,4 +476,4 @@ speaker.addEventListener('click', function (e) {
     e.stopPropagation();
 });
 
-// =============START-BACKGROUND-COLORCHANGER========
+// =============END-BACKGROUND-COLORCHANGER========

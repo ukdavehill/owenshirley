@@ -4,6 +4,8 @@
 @import 'sidenav.scss';
 @import 'videoarea.scss';
 @import 'about.scss';
+@import 'music.scss';
+@import 'contact.scss';
 
 
 // $drop-down-color: #DAFB55;
@@ -30,6 +32,10 @@
     
     // font-family: 'Montserrat', sans-serif;
     font-family: 'Hind Siliguri', sans-serif;
+}
+
+.contact .info p {
+  display: block;
 }
   
 a {
@@ -81,24 +87,28 @@ a:active {
 };
 @include v-x;
 
-@media screen and (min-width: 901px) {   
-  .grid, #about {
+@media screen and (min-width: 901px) { 
+  .item1 {
+    min-height: 155.73px;
+    // min-height: 250.73px;
+  }
+  .grid, #about, #music, #contact {
         
-        margin-left: $menu-width + 17px; //17px is scroll width
+        margin-left: $menu-width + 7px; //17px is scroll width
   }
   .grid {
         grid-template-areas: "v-1 v-2"
-                    "page-message v-4" 
-                    "v-5 v-6"
-                    "v-7 v-8"
-                    "v-9 v-10"
-                    "v-11 v-12"
-                    "v-13 v-14"
-                    "v-15 v-16"
-                    "v-17 v-18"
-                    "v-19 v-20"
-                    "v-21 v-22"
-                    "v-23 v-24";
+                    "page-message v-3" 
+                    "v-4 v-5"
+                    "v-6 v-7"
+                    "v-8 v-9"
+                    "v-10 v-13"
+                    "v-14 v-15"
+                    "v-16 v-17"
+                    "v-18 v-19"
+                    "v-20 v-21"
+                    "v-22 v-23"
+                    "v-24 v-25";
                     
         grid-template-columns: 50% 50%;
         grid-auto-rows: auto;
@@ -116,7 +126,10 @@ a:active {
 
 
 @media screen and (min-width: 1201px)  {    
-  
+  .item1 {
+    // max-height: 257.19px;
+    // min-height: 155.73px;
+  }
 
   .grid {
     grid-template-areas: "v-1 v-2 v-3"
