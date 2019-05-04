@@ -44,7 +44,7 @@ span.invisible {
     .item {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows:$title-height auto;
+      grid-template-rows:$dropdown-height-sm auto;
       background-color: $title-color;
     //   height: 20%
       // transition: height 1s;
@@ -68,12 +68,12 @@ span.invisible {
         .icon {
           text-align: center;
           position: relative;
-          top: -10px;
-
+          top: -4px;
+          
         }
         
         //ASK OWEN ABOUT THIS
-        .icon:hover i {
+        .icon:hover i{
           transform: scale(1.1);
         }
 
@@ -171,14 +171,26 @@ span.invisible {
   
   #page-message {
     grid-area: page-message;
-    background-color: $drop-down-color;
+    // display: flex;
+    // justify-content: center;
+    // flex-flow: row wrap;
+    background-color: $menu-color;
+    display: flex;
+    flex-direction: column;
     color: black;
     font-size: 1.5rem;
     // height: 300px;
     // border: $border-width solid black;
     // margin-left: 8px;
+    align-items: center;
+    
     h3 {
-      margin-left: 8px;
+      font-size: 12px;
+    }
+    img {
+      width: 65%;
+      margin-top: 10px;
+      height: auto;
     }
   }
   

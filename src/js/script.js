@@ -1,5 +1,5 @@
 // ===============START-VIDEO LIST====================
-const welcomeMessage = 'OWEN SHIRLEY AUDIO';
+const welcomeMessage = 'Welcome...';
 
 const videos = [
     {
@@ -245,7 +245,7 @@ function populateVideos(pageMessage) {
 
     // add page message to 
     videoArea.innerHTML =
-        html + `<div id="page-message"><h3>${pageMessage}</h3></div>`;
+        html + `<div id="page-message"><img src="images/owen_signature.jpg"><h3>${pageMessage}</h3></div>`;
 }
 
 // const welcomeMessage = 'Welcome to my site...';
