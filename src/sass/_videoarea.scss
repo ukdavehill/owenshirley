@@ -183,6 +183,7 @@ span.invisible {
     // border: $border-width solid black;
     // margin-left: 8px;
     align-items: center;
+    pointer-events: none;
     
     h3 {
       font-size: 17px;
@@ -200,6 +201,9 @@ span.invisible {
       display: block;
       font-size: 14px;
       padding: 2px 10px;
+    }
+    p:hover {
+      cursor: auto !important;
     }
     img {
       width: 66%;

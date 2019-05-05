@@ -361,73 +361,73 @@ videoArea.addEventListener('click', (e) => {
 
 // debounce function from Underscore.js
 
-function debounce(func, wait, immediate) {
-    var timeout;
-    return function () {
-        var context = this, args = arguments;
-        var later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-};
+// function debounce(func, wait, immediate) {
+//     var timeout;
+//     return function () {
+//         var context = this, args = arguments;
+//         var later = function () {
+//             timeout = null;
+//             if (!immediate) func.apply(context, args);
+//         };
+//         var callNow = immediate && !timeout;
+//         clearTimeout(timeout);
+//         timeout = setTimeout(later, wait);
+//         if (callNow) func.apply(context, args);
+//     };
+// };
 
-var resizeCount = 0;
-var gridHeight;
+// var resizeCount = 0;
+// var gridHeight;
 
-const laptopScreen = 1201;
-const tabletScreen = 901;
-const sideMenuWidth = 220;
-const gridGap = 1;
+// const laptopScreen = 1201;
+// const tabletScreen = 901;
+// const sideMenuWidth = 220;
+// const gridGap = 1;
 
-const scrollWidth = 17;
+// const scrollWidth = 17;
 
-// Height in pixels above each video with title
-const titleHeight = 40;
+// // Height in pixels above each video with title
+// const titleHeight = 40;
 
-const videoRatio = 0.5625;
+// const videoRatio = 0.5625;
 
-var setRowHeight = debounce(function () {
-    var titleBox = document.getElementById('page-message');
-    const windowWidth = window.innerWidth;
-    var videoWidth;
-    if (windowWidth >= laptopScreen) {
-        videoWidth = (windowWidth - sideMenuWidth - (3 * gridGap) - (2 * scrollWidth)) / 3;
-    } else if (windowWidth >= tabletScreen) {
-        console.log('TABLET WIDTH');
-        // THIS NEEDS ADJUSTING
-        videoWidth = (windowWidth - sideMenuWidth - (2 * scrollWidth) - (2 * gridGap)) / 2;
-    } else {
-        videoWidth = windowWidth - scrollWidth;
-    }
+// var setRowHeight = debounce(function () {
+//     var titleBox = document.getElementById('page-message');
+//     const windowWidth = window.innerWidth;
+//     var videoWidth;
+//     if (windowWidth >= laptopScreen) {
+//         videoWidth = (windowWidth - sideMenuWidth - (3 * gridGap) - (2 * scrollWidth)) / 3;
+//     } else if (windowWidth >= tabletScreen) {
+//         console.log('TABLET WIDTH');
+//         // THIS NEEDS ADJUSTING
+//         videoWidth = (windowWidth - sideMenuWidth - (2 * scrollWidth) - (2 * gridGap)) / 2;
+//     } else {
+//         videoWidth = windowWidth - scrollWidth;
+//     }
 
-    console.log('window width is');
-    console.log(windowWidth);
-    console.log('box width is: ');
-    console.log(titleBox.offsetWidth);
+//     console.log('window width is');
+//     console.log(windowWidth);
+//     console.log('box width is: ');
+//     console.log(titleBox.offsetWidth);
 
-    console.log('video width is: ');
-    console.log(videoWidth);
-    gridHeight = (videoWidth * videoRatio) + titleHeight;
-    console.log('gridHeight is: ');
-    console.log(gridHeight);
-    resizeCount++;
+//     console.log('video width is: ');
+//     console.log(videoWidth);
+//     gridHeight = (videoWidth * videoRatio) + titleHeight;
+//     console.log('gridHeight is: ');
+//     console.log(gridHeight);
+//     resizeCount++;
 
-    // const itemSelected = document.querySelectorAll('')
+//     // const itemSelected = document.querySelectorAll('')
 
 
-}, 250);
+// }, 250);
 
-function makeAuto() {
+// function makeAuto() {
 
-}
+// }
 
-setRowHeight();
-window.addEventListener('resize', setRowHeight);
+// setRowHeight();
+// window.addEventListener('resize', setRowHeight);
 
 // ===================END-SET MAX ROW==============
 
