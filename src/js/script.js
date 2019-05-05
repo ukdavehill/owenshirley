@@ -1,5 +1,5 @@
 // ===============START-VIDEO LIST====================
-const welcomeMessage = 'Welcome...';
+const welcomeMessage = 'Audio Post-Production';
 
 const videos = [
     {
@@ -245,7 +245,7 @@ function populateVideos(pageMessage) {
 
     // add page message to 
     videoArea.innerHTML =
-        html + `<div id="page-message"><img src="images/owen_signature.jpg"><h3>${pageMessage}</h3></div>`;
+        html + `<div id="page-message"><img src="images/owen_signature.jpg"><h3>${pageMessage}</h3><h4>Bristol, UK</h4><p>owengshirley@gmail.com</p><p>+44 (0) 7947 576 998 (including WhatsApp)</p> <p>Skype: owenwoos</p></div>`;
 }
 
 // const welcomeMessage = 'Welcome to my site...';
