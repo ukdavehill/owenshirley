@@ -276,7 +276,7 @@ function getClickedElement(el) {
     const ggparent = gparent.parentNode;
 
 
-    if (target.matches('h4')) {
+    if (target.matches('.text h4')) {
         toggleItem = gparent;
         toggleText = parent;
         toggleVideo = gparent.querySelector('.video');
@@ -284,7 +284,7 @@ function getClickedElement(el) {
         toggleIcon = gparent.querySelector('.icon');
     }
 
-    else if (target.matches('i')) {
+    else if (target.matches('.text i')) {
         console.log('i clicked!!');
         toggleItem = ggparent;
         toggleText = gparent;
@@ -302,7 +302,7 @@ function getClickedElement(el) {
         toggleIcon = parent.querySelector('.icon');
     }
 
-    else if (target.matches('p')) {
+    else if (target.matches('.text p')) {
         console.log('p clicked!!');
         toggleItem = gparent;
         toggleText = parent;
@@ -320,8 +320,11 @@ function getClickedElement(el) {
         toggleIcon = target;
     }
 
-    else if (target.matches('#page-message') || target.matches('h3')) {
-        console.log('page-message clicked');
+    // else if (target.matches('#page-message')) {
+    //     console.log('page-message clicked');
+    //     toggleItem = false;
+    // }
+    else {
         toggleItem = false;
     }
 
