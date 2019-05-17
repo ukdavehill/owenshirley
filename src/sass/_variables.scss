@@ -1,21 +1,25 @@
-// $drop-down-color: #DAFB55;
-// $title-color: lighten($drop-down-color, 15%);
-// $primary-color: $title-color;
-// $menu-color: #292257;
-// $menu-width: 220px;
-// $border-width: 0px;
-// $grid-border-width: 5px;
-// $title-height: 40px;
-// $videos: 24;
+// COLOURS
 $drop-down-color: white;
 $title-color: lighten($drop-down-color, 15%);
 $primary-color: $title-color;
 $menu-color: white;
 $grey: #cdd;
+$text-color: #000;
+
+// SIDE-NAV
+$div-width: 55%;
 $menu-width: 220px;
+
+// VIDEO-AREA
 $border-width: 0px;
 $grid-border-width: 7px;
 $dropdown-height-sm: 24px;
 $dropdown-height-lg: 7px;
-$videos: 24;
+$videos: 16;
+
+
+// RESPONSIVENESS
+$min-screen-width: 320;
+$max-screen-width: 1920;
+$scroll-bar-width: 17;
 

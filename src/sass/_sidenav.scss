@@ -43,6 +43,7 @@
         align-content: center;
         display: flex;
         justify-content: center;
+        
         ul {
           // border: 2px solid black;
           // display: grid;
@@ -51,26 +52,17 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          width: 50%;
-        
+          width: $div-width;
         }
 
         ul > li{
           list-style: none;
-          border-bottom: 2px solid rgba(0,0,0,0.3);
+          border-bottom: 2px solid $grey;
           // background: pink;
           flex: 1;
           display: flex;
           align-items: center;
           
-          span#selected a {
-              // font-size: 1.3rem;
-              transform: scale(2.0);
-              font-weight: bold;
-              pointer-events: none;
-              
-          }
-           
           a {
             text-decoration: none;
             color: black;
@@ -79,38 +71,39 @@
             a:hover {
               color: $grey;
             }
-            // color: $primary-color;
+
+          span#selected a {
+              // font-size: 1.9rem;
+              // transform: scale(2.0);
+              font-weight: bold;
+              pointer-events: none; 
+          }
+           
           }
         }
     }
-  
+    
     .contact {
         grid-area: contact;
-        // display: flex;
-        // flex-direction: column;
         align-self: end;
         justify-self: center;
-        width: 50%;
-        // align-content: center;
-        // justify-content: center;
-        // flex-flow: row wrap;
+        width: $div-width;
+        
         .icons {
           display: flex;
           justify-content: space-between;
           width: 100%;
           margin-bottom: 10px;
-          
         }
         
-
         i {
-          display: inline-block;
+          // display: inline-block;
           // padding: 5px;
           font-size: 25px;
           // opacity: 0.6;
           transition: 0.4s;
           color: black;
-          // should do fade
+          
           &:hover {
             color: $grey;
             opacity: 1;

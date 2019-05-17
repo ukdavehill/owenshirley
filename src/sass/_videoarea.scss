@@ -51,7 +51,7 @@ span.invisible {
     }
     .item .text {
         display: grid;
-        grid-template-rows: 20px auto;
+        // grid-template-rows: 20px auto;
         justify-content: center;
         overflow: none;
         border: $border-width solid black;
@@ -68,7 +68,7 @@ span.invisible {
         .icon {
           text-align: center;
           position: relative;
-          top: -4px;
+          top: -1px;
           
         }
         
@@ -109,7 +109,7 @@ span.invisible {
     height: 100%;
     justify-content: stretch;
     // min-height: 318.44px;
-    min-height:350.17px;
+    // min-height:350.17px;
     // transition: height 0.5s;
   }
   
@@ -125,36 +125,18 @@ span.invisible {
   
   .text1 {
     display:grid;
-    grid-template-rows: auto 30px;
-    transition: grid-template-rows 2s;
-    align-items: center; 
+    // grid-template-rows: auto 30px;
+    // grid-template-rows: 200px auto;
+    // transition: grid-template-rows 2s;
+    // align-items: center; 
     text-align: center;
     flex-basis: 100%;
   
     h4 {
-      margin-top: 6px;
+      display: block !important;
+      // margin-top: 6px;
     }
   
-    // a {
-    //   text-decoration: none;
-    // }
-    // a:link {
-    //   color: #42b0f4;
-    // }
-     
-    // a:visited {
-    //   color: #d62a4d;
-    // }
-    
-   
-    // a:hover {
-    //   color: #840721;
-    // }
-    
-    
-    // a:active {
-    //   color: black;
-    // }
   }
   
   p {
@@ -232,9 +214,16 @@ span.invisible {
     // background: #3FBF3F;
     background: black;
   }
-  
-  //'VIDEO NOT AVAILABLE' image to replace iframe image
-  #text-id1 {
-    background-image: url('http://www.rojgaracademy.org/images/NoVideoAvailable.png');
-    background-position: center;
+
+   
+  // //'VIDEO NOT AVAILABLE' image to replace iframe image
+  // #text-id1 {
+  //   background-image: url('http://www.rojgaracademy.org/images/NoVideoAvailable.png');
+  //   background-position: center;
+  // }
+
+  // ADD classList when touched
+
+  .touched {
+    background-color:$grey;
   }

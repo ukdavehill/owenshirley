@@ -10,6 +10,19 @@
         // margin-left: $menu-width + 17px;
         height: 100%;
 
+        .signature {
+            margin: 10px 0;
+            // width: 75%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            // flex: 1; 
+            img {
+                flex: 0 1 75%;
+                // height 600px;
+            } 
+        }
+
         section {
             display: flex;
             justify-content: center;
@@ -27,14 +40,20 @@
         }
 
         .photo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
            
             img{
-                height: 400px;
-                width: auto;
-                display: block;
+                // height: 200px;
+                // width: auto;
+                display: block;  
+                height: auto;
+                width: 95%; 
+                
             }
             p.wp-caption-text {
-                color: #FFF !important;
+                color: #FFF;
                 background: #222;
                 font-size: 12px;
                 font-weight: 300;
@@ -46,11 +65,18 @@
                 display: block;
                 text-align: center;
                 margin-bottom: 30px;
+                width: 95%;
             }
 
         }
         
 }
+
+// @media screen and (min-width: 775px) {
+//     #about {
+//         img
+//     }
+// }
 
 
 
