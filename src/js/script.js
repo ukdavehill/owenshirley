@@ -1,5 +1,5 @@
 // ===============START-VIDEO LIST====================
-const welcomeMessage = 'Audio Post-Production';
+
 
 const videos = [
     {
@@ -253,8 +253,11 @@ function populateVideos(videoList) {
         .join("");
 
     // add page message to 
-    videoArea.innerHTML =
-        html + `<div id="page-message"><img src="images/owen_signature.jpg"><h3>Audio Post-Production</h3><h4>Bristol, UK</h4><p>owengshirley@gmail.com</p><p>+44 (0) 7947 576 998 (including WhatsApp)</p> <p>Skype: owenwoos</p></div>`;
+    // videoArea.innerHTML =
+    //     html + `<div id="page-message"><img src="images/owen_signature.jpg"><h3>Audio Post-Production</h3><h4>Bristol, UK</h4><p>owengshirley@gmail.com</p><p>+44 (0) 7947 576 998 (including WhatsApp)</p> <p>Skype: owenwoos</p></div>`;
+
+    videoArea.insertAdjacentHTML("afterbegin", html);
+
 }
 
 // const welcomeMessage = 'Welcome to my site...';
@@ -291,6 +294,7 @@ function getClickedElement(el) {
         toggleVideo = gparent.querySelector('.video');
         toggleActive = parent.querySelector('p');
         toggleIcon = gparent.querySelector('.icon');
+
     }
 
     else if (target.matches('.text i')) {
@@ -300,6 +304,7 @@ function getClickedElement(el) {
         toggleVideo = ggparent.querySelector('.video');
         toggleActive = gparent.querySelector('p');
         toggleIcon = parent;
+
     }
 
     else if (target.matches('div.text')) {
@@ -309,6 +314,7 @@ function getClickedElement(el) {
         toggleVideo = parent.querySelector('.video');
         toggleActive = target.querySelector('p');
         toggleIcon = parent.querySelector('.icon');
+
     }
 
     else if (target.matches('.text p')) {
@@ -318,6 +324,7 @@ function getClickedElement(el) {
         toggleVideo = gparent.querySelector('.video');
         toggleActive = target;
         toggleIcon = gparent.querySelector('.icon');
+
     }
 
     else if (target.matches('div.icon')) {
@@ -327,12 +334,32 @@ function getClickedElement(el) {
         toggleVideo = gparent.querySelector('.video');
         toggleActive = parent.querySelector('p');
         toggleIcon = target;
+
     }
 
     else {
         toggleItem = false;
+
     }
 
+}
+
+function hoverDropdown() {
+    e.preventDefault();
+    getClickedElement(e);
+    if (toggleItem) {
+        toggleItem.classList.toggle('hovered');
+    }
+    e.stopPropagation();
+}
+
+function aboutToDropdown(e) {
+    e.preventDefault();
+    getClickedElement(e);
+    if (toggleItem) {
+        toggleItem.classList.toggle('touched');
+    }
+    // e.stopPropagation();
 }
 
 function dropDown(e) {
@@ -347,21 +374,27 @@ function dropDown(e) {
         toggleVideo.classList.toggle('video1');
         toggleActive.classList.toggle('active');
         toggleIcon.classList.toggle('fa-rotate-180');
-        e.stopPropagation();
+        // e.stopPropagation();
     };
 }
 
-videoArea.addEventListener('click', dropDown);
 
-videoArea.addEventListener('touchstart', e => {
-    // dropDown(e);
-    e.preventDefault();
-    getClickedElement(e);
-    if (toggleItem) {
-        toggleItem.classList.toggle('touched');
-    }
-    e.stopPropagation();
-});
+
+videoArea.addEventListener('mousedown', aboutToDropdown);
+videoArea.addEventListener('mouseup', dropDown);
+
+// DO THE SAME WITH CLICKING???
+// videoArea.addEventListener('touchstart', e => {
+//     // dropDown(e);
+//     e.preventDefault();
+//     getClickedElement(e);
+//     if (toggleItem) {
+//         toggleItem.classList.toggle('touched');
+//     }
+//     e.stopPropagation();
+// });
+
+videoArea.addEventListener('touchstart', aboutToDropdown);
 
 videoArea.addEventListener('touchend', dropDown);
 
@@ -468,38 +501,27 @@ const cross = hamburger.querySelector('.fa-times');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const ul = hamburger.querySelector('ul');
 
-bars.addEventListener('click', function () {
+function showMenu() {
     console.log('hamburger clicked');
-
     hamburgerMenu.classList.remove('hide-menu');
     cross.classList.remove('inactive');
     bars.classList.add('inactive');
 }
-);
 
-cross.addEventListener('click', function () {
+function hideMenu() {
     console.log('cross clicked');
     hamburgerMenu.classList.add('hide-menu');
     cross.classList.add('inactive');
     bars.classList.remove('inactive');
-})
+}
+
+bars.addEventListener('click' || 'touchstart', showMenu);
+
+cross.addEventListener('click' || 'touchend', hideMenu);
+
+// bars.addEventListener('touchstart', showMenu);
+
+// cross.addEventListener('touchend', hideMenu);
 
 // =====================END-HAMBURGER================
 
-// =============START-BACKGROUND-COLORCHANGER========
-const menuColor = '#292257';
-const colors = ['#ff0000', '#00ff00', '#0000ff', menuColor];
-const colorsLength = colors.length;
-let counter = 0;
-
-var speaker = document.getElementById('click-color');
-
-// RESEARCH EVENT LISTENERS AND PROPOGATION
-speaker.addEventListener('click', function (e) {
-    var newColor = colors[counter % colorsLength];
-    speaker.style.backgroundColor = newColor;
-    counter++;
-    e.stopPropagation();
-});
-
-// =============END-BACKGROUND-COLORCHANGER========

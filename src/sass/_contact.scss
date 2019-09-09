@@ -3,16 +3,51 @@
     background-color: $primary-color;
     // background-color: black;
     flex-flow: row wrap;
-    // justify-content: center;
+    justify-content: center;
     height: 100vh;
+    align-items: flex-start;
     // margin-left: $menu-width + 17px;
+    overflow-y: auto;
+
+    .signature {
+        margin-top: 10px;
+        // margin-bottom: 80px;
+        text-align: center;
+        flex-basis: 100%;
+        width: 100%;
+        
+    }
+
+    // .signature {
+    //     margin: 10px 0;
+    //     // width: 75%;
+    //     height: auto;
+    //     display: flex;
+    //     justify-content: center;
+    //     // flex: 1; 
+    //     img {
+    //         flex: 0 1 75%;
+    //         // height 600px;
+    //     } 
+    // }
+
+    
+    section {
+        // margin-top: -80px;
+        border: 1px solid #999;
+        border-radius: 10%;
+        padding: 30px;
+        box-shadow: 2px 2px 5px black;
+    }
     section p {
         display: block;
+        font-size: 24px;
     }
-    overflow-y: auto;
+    
 
     section h2 {
         padding-left: 10px;
+        font-size: 30px;
     }
     
 }

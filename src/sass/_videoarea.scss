@@ -44,8 +44,8 @@ span.invisible {
     .item {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows:$dropdown-height-sm auto;
-      background-color: $title-color;
+      grid-template-rows: $dropdown-height-sm auto;
+      background-color: $dropdown-color;
     //   height: 20%
       // transition: height 1s;
     }
@@ -81,7 +81,7 @@ span.invisible {
 
     
     .video {
-      background: $drop-down-color;
+      background: $dropdown-color;
       position: relative;
       height: 0;
       padding-top: 56.25%;
@@ -103,12 +103,13 @@ span.invisible {
     // display: grid;
     // grid-template-columns: 1fr;
     // grid-template-rows: 100% 0px;
-    background-color: $drop-down-color;
+    background-color: $dropdown-color;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: stretch;
-    // min-height: 318.44px;
+    min-height: 180px + $dropdown-height-sm;
+    // min-height: 204px;
     // min-height:350.17px;
     // transition: height 0.5s;
   }
@@ -222,8 +223,13 @@ span.invisible {
   //   background-position: center;
   // }
 
-  // ADD classList when touched
+  // Add classList when touched
 
   .touched {
-    background-color:$grey;
+    // background-color: darken($grey, 15%);
+    background-color: $grey;
+  }
+
+  .hovered {
+    background-color: pink;
   }

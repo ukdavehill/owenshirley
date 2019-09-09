@@ -72,14 +72,15 @@ a:active {
       & .text:hover {
         // font-weight: bold;
         cursor: pointer;
-        background-color: $grey;
-        transition: background-color 0.4s;
+        // background-color: $grey;
+        transition: background-color 0.6s;
       }
       & .text1:hover {
         // font-weight: bold;
         cursor: default;
-        background-color: $grey;
-        transition: background-color 0.4s;
+        
+        // background-color: $grey;
+        transition: background-color 0.6s;
         
         &.text1 i, h4 {
           cursor: pointer;
@@ -90,6 +91,57 @@ a:active {
 };
 @include v-x;
 
+// MOBILE + TABLET
+// min-height= min-width x 0.5625 + dropdown-height
+@media screen and (min-width: 360px){
+  .item1 {
+    min-height: 202.5px + $dropdown-height-sm;
+  }
+}
+
+@media screen and (min-width: 375px){
+  .item1 {
+    min-height: 210.94px + $dropdown-height-sm;
+  }
+}
+
+@media screen and (min-width: 414px){
+  .item1 {
+    min-height: 233.44px + $dropdown-height-sm;
+  }
+}
+
+@media screen and (min-width: 425px){
+  .item1 {
+    min-height: 239.06px + $dropdown-height-sm;
+  }
+}
+
+@media screen and (min-width: 480px){
+  .item1 {
+    min-height: 270px + $dropdown-height-sm;
+  }
+}
+
+@media screen and (min-width: 600px){
+  .item1 {
+    min-height: 337.5px + $dropdown-height-sm;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .item1 {
+    min-height: 432px + $dropdown-height-sm;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .item1 {
+    min-height: 450px + $dropdown-height-sm;
+  }
+}
+
+// 2 columns video grid
 @media screen and (min-width: 901px) { 
   .item {
     grid-template-rows:$dropdown-height-lg auto;
@@ -99,10 +151,10 @@ a:active {
     }
   }
 
-  // .item1 {
-  //   min-height: 155.73px;
-  //   // min-height: 250.73px;
-  // }
+  .item1 {
+    min-height: 184.78px + $dropdown-height-lg;
+    // min-height: 250.73px;
+  }
   .grid, #about, #music, #contact {
         
         margin-left: $menu-width + 7px; //17px is scroll width
@@ -144,7 +196,7 @@ a:active {
         grid-auto-rows: auto;
         // grid-template-rows: calc((0.5625*(100vw -$menu-width -34 -2) /2));
         // grid-gap: $grid-border-width;
-        grid-gap: 0px 7px;
+        grid-gap: 0px $grid-border-width;
   }
   .main-container .side-bar {
     display: grid; 
@@ -155,9 +207,10 @@ a:active {
   }
 }
 
+
 @media screen and (min-width: 1024px) {
   .item1 {
-    min-height: 226.38px;
+    min-height: 219.38px + $dropdown-height-lg;
   }
 }
 
@@ -180,8 +233,7 @@ a:active {
   
   
   .item1 {
-    
-    min-height: 183.8px;
+    min-height: 176.8px + $dropdown-height-lg;
   }
 
   .grid {
@@ -203,15 +255,37 @@ a:active {
 
 @media screen and (min-width: 1280px) {
   .item1 {
-    min-height: 198.61px;
+    min-height: 191.61px + $dropdown-height-lg;
   }
 }
 
 @media screen and (min-width: 1366px) {
   .item1 {
-    min-height: 214.73px;
+    min-height: 207.73px + $dropdown-height-lg;
   }
 }
+
+
+// min-height: calc((screenWidth - menuWidth - (3 * gridWidth) - scrollWidth)*0.5625 / 3) + dropDownWidth)px
+@media screen and (min-width: 1440px) {
+  .item1 {
+    min-height: 221.63px + $dropdown-height-lg;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .item1 {
+    min-height: 251.63px + $dropdown-height-lg;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .item1 {
+    min-height: 311.63px + $dropdown-height-lg;
+  }
+}
+
+ 
 
 
 // @mixin keepSize {
