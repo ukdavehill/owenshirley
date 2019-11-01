@@ -8,7 +8,7 @@ const hamburgerMenu = document.querySelector('.hamburger-menu');
 const ul = hamburger.querySelector('ul');
 
 bars.addEventListener('click', function () {
-    console.log('hamburger clicked');
+    // console.log('hamburger clicked');
 
     hamburgerMenu.classList.remove('hide-menu');
     cross.classList.remove('inactive');

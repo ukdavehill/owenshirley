@@ -224,6 +224,7 @@ const videos = [
 // ===============END-VIDEO LIST====================
 
 const videoArea = document.querySelector(".video-area");
+const pageMessage = document.getElementById('page-message')
 
 function populateVideos(videoList) {
     var html = videoList
@@ -272,11 +273,11 @@ function populateVideos(videoList) {
 // });
 
 function loadVideos() {
-    console.log("starting to populate");
-    console.time('loading page');
+    // console.log("starting to populate");
+    // console.time('loading page');
     populateVideos(videos);
-    console.timeEnd('loading page');
-    console.log("finished");
+    // console.timeEnd('loading page');
+    // console.log("finished");
 };
 document.addEventListener('DOMContentLoaded', loadVideos);
 
@@ -299,7 +300,7 @@ function getClickedElement(el) {
     }
 
     else if (target.matches('.text i')) {
-        console.log('i clicked!!');
+        // console.log('i clicked!!');
         toggleItem = ggparent;
         toggleText = gparent;
         toggleVideo = ggparent.querySelector('.video');
@@ -309,7 +310,7 @@ function getClickedElement(el) {
     }
 
     else if (target.matches('div.text')) {
-        console.log('div.text clicked!!');
+        // console.log('div.text clicked!!');
         toggleItem = parent;
         toggleText = target;
         toggleVideo = parent.querySelector('.video');
@@ -319,7 +320,7 @@ function getClickedElement(el) {
     }
 
     else if (target.matches('.text p')) {
-        console.log('p clicked!!');
+        // console.log('p clicked!!');
         toggleItem = gparent;
         toggleText = parent;
         toggleVideo = gparent.querySelector('.video');
@@ -329,7 +330,7 @@ function getClickedElement(el) {
     }
 
     else if (target.matches('div.icon')) {
-        console.log('div.icon clicked!!');
+        // console.log('div.icon clicked!!');
         toggleItem = gparent;
         toggleText = parent;
         toggleVideo = gparent.querySelector('.video');
@@ -345,29 +346,34 @@ function getClickedElement(el) {
 
 }
 
-function hoverDropdown() {
-    e.preventDefault();
-    getClickedElement(e);
-    if (toggleItem) {
-        toggleItem.classList.toggle('hovered');
-    }
-    e.stopPropagation();
-}
+// function hoverDropdown(e) {
+//     console.log('hoverDropdown');
+//     console.log(e.target);
+//     e.preventDefault();
+//     getClickedElement(e);
+//     if (toggleItem) {
+//         toggleItem.classList.toggle('hovered');
+//     }
+//     e.stopPropagation();
+//}
 
 function aboutToDropdown(e) {
-    e.preventDefault();
-    getClickedElement(e);
-    if (toggleItem) {
-        toggleItem.classList.toggle('touched');
+    if (!e.target.matches('#page-message') && !e.target.parentElement.matches('#page-message')) {
+        e.preventDefault();
+        getClickedElement(e);
+        if (toggleItem) {
+            toggleItem.classList.toggle('touched');
+        }
     }
+
     // e.stopPropagation();
 }
 
 function dropDown(e) {
-    console.log('clicked element is:')
-    console.dir(e.target);
+
+
     getClickedElement(e);
-    console.dir(toggleItem);
+    // console.dir(toggleItem);
 
     if (toggleItem) {
         toggleItem.classList.toggle('item1');
@@ -503,14 +509,14 @@ const hamburgerMenu = document.querySelector('.hamburger-menu');
 const ul = hamburger.querySelector('ul');
 
 function showMenu() {
-    console.log('hamburger clicked');
+    // console.log('hamburger clicked');
     hamburgerMenu.classList.remove('hide-menu');
     cross.classList.remove('inactive');
     bars.classList.add('inactive');
 }
 
 function hideMenu() {
-    console.log('cross clicked');
+    // console.log('cross clicked');
     hamburgerMenu.classList.add('hide-menu');
     cross.classList.add('inactive');
     bars.classList.remove('inactive');
