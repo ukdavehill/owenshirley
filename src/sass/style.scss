@@ -69,27 +69,29 @@ a:active {
   @for $i from 1 through $videos {
     .v-#{$i} {
       grid-area: v-#{$i};
-      & .text:hover {
-        // font-weight: bold;
-        cursor: pointer;
-        // background-color: $grey;
-        transition: background-color 0.6s;
       }
-      & .text1:hover {
-        // font-weight: bold;
-        cursor: default;
-        
-        // background-color: $grey;
-        transition: background-color 0.6s;
-        
-        &.text1 i, h4 {
-          cursor: pointer;
-        }
-      }
-    }
   }
 };
+
 @include v-x;
+.item {
+  .text:hover {
+    // font-weight: bold;
+    cursor: pointer;
+    // background-color: $grey;
+    transition: background-color 0.6s;
+}
+  .text1:hover {
+    // font-weight: bold;
+    cursor: default;
+    
+    // background-color: $grey;
+    transition: background-color 0.6s;
+  }
+  .text1 i, h4 {
+    cursor: pointer;
+  }
+}
 
 // MOBILE + TABLET
 // min-height= min-width x 0.5625 + dropdown-height
