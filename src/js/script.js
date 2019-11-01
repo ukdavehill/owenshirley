@@ -271,13 +271,14 @@ function populateVideos(videoList) {
 //     console.log("PORTFOLIO CLICKED");
 // });
 
-window.onload = function () {
+function loadVideos() {
     console.log("starting to populate");
     console.time('loading page');
     populateVideos(videos);
     console.timeEnd('loading page');
     console.log("finished");
 };
+document.addEventListener('DOMContentLoaded', loadVideos);
 
 var toggleItem, toggleText, toggleVideo, toggleActive, toggleIcon;
 
