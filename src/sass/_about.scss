@@ -18,8 +18,10 @@
             justify-content: center;
             // flex: 1; 
             img {
-                flex: 0 1 75%;
+                // flex: 0 1 75%;
                 // height 600px;
+                width: 70%;
+                min-width: 200px;
             } 
         }
 
@@ -72,11 +74,11 @@
         
 }
 
-// @media screen and (min-width: 775px) {
-//     #about {
-//         img
-//     }
-// }
+@media screen and (min-width: 500px) {
+    #about .signature img {
+        width: 100%;
+    }
+}
 
 
 

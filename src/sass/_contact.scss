@@ -9,35 +9,32 @@
     // margin-left: $menu-width + 17px;
     overflow-y: auto;
 
-    .signature {
-        margin-top: 10px;
-        // margin-bottom: 80px;
-        text-align: center;
-        flex-basis: 100%;
-        width: 100%;
-        
-    }
+   
 
-    // .signature {
-    //     margin: 10px 0;
-    //     // width: 75%;
-    //     height: auto;
-    //     display: flex;
-    //     justify-content: center;
-    //     // flex: 1; 
-    //     img {
-    //         flex: 0 1 75%;
-    //         // height 600px;
-    //     } 
-    // }
+    .signature {
+        margin: 10px 0;
+        // width: 75%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        // flex: 1; 
+        img {
+            // flex: 0 1 75%;
+            // height 600px;
+            width: 70%;
+            min-width: 200px;
+        } 
+    }
 
     
     section {
         // margin-top: -80px;
         border: 1px solid #999;
-        border-radius: 10%;
+        border-radius: 2%;
         padding: 30px;
-        box-shadow: 2px 2px 5px black;
+        box-shadow: 1px 1px 1px black;
+        // background-color: $grey;
     }
     section p {
         display: block;
@@ -52,3 +49,8 @@
     
 }
 
+@media screen and (min-width: 800px) {
+    #contact .signature {
+        width: 70%;
+    }
+}

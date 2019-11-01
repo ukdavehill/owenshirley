@@ -26,19 +26,19 @@ cross.addEventListener('click', function () {
 // =====================END-HAMBURGER================
 
 // =============START-BACKGROUND-COLORCHANGER========
-const menuColor = '#292257';
-const colors = ['#ff0000', '#00ff00', '#0000ff', menuColor];
-const colorsLength = colors.length;
-let counter = 0;
+// const menuColor = '#292257';
+// const colors = ['#ff0000', '#00ff00', '#0000ff', menuColor];
+// const colorsLength = colors.length;
+// let counter = 0;
 
-var speaker = document.getElementById('click-color');
+// var speaker = document.getElementById('click-color');
 
-// RESEARCH EVENT LISTENERS AND PROPOGATION
-speaker.addEventListener('click', function (e) {
-    var newColor = colors[counter % colorsLength];
-    speaker.style.backgroundColor = newColor;
-    counter++;
-    e.stopPropagation();
-});
+// // RESEARCH EVENT LISTENERS AND PROPOGATION
+// speaker.addEventListener('click', function (e) {
+//     var newColor = colors[counter % colorsLength];
+//     speaker.style.backgroundColor = newColor;
+//     counter++;
+//     e.stopPropagation();
+// });
 
 // =============START-BACKGROUND-COLORCHANGER========

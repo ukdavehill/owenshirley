@@ -9,9 +9,18 @@
     overflow-y: auto;
     // margin-left: $menu-width + 17px;
     .signature {
-        margin-top: 10px;
-        
-        // text-align: center;
+        margin: 10px 0;
+        // width: 75%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        // flex: 1; 
+        img {
+            // flex: 0 1 75%;
+            // height 600px;
+            width: 70%;
+            min-width: 200px;
+        } 
     }
     section p {
         display: block;
@@ -28,3 +37,8 @@
     }
 }
 
+@media screen and (min-width: 500px) {
+    #music .signature img {
+        width: 100%;
+    }
+}
