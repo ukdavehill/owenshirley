@@ -29,7 +29,7 @@
             display: flex;
             justify-content: center;
             flex-flow: column nowrap;
-            width: 100%;
+            width: 95%;
             
         }
         section h2 {
@@ -79,6 +79,25 @@
         width: 100%;
     }
 }
+
+
+
+@media screen and (min-width: 650px) {
+    #about section {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #about .signature img {
+        display: none;
+    }
+    section p:first-child {
+        margin-top: 30px;
+    }
+}
+
+
 
 
 

@@ -157,6 +157,8 @@ span.invisible {
     // display: flex;
     // justify-content: center;
     // flex-flow: row wrap;
+    min-height: 196px;
+  
     background-color: $menu-color;
     display: flex;
     flex-direction: column;

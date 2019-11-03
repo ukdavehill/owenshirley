@@ -22,16 +22,29 @@
             min-width: 200px;
         } 
     }
+
+    section {
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+        width: 85%;
+        
+    }
     section p {
         display: block;
+        padding: 10px 0;
+    }
+
+    section p:first-child {
+        padding-top: 30px;
     }
     
 
-    section h2 {
-        padding-left: 10px;
-    }
+    // section h2 {
+    //     padding-left: 10px;
+    // }
     .soundcloud-container {
-        width: 80%;
+        width: 85%;
         
         // height: 100px;
     }
@@ -40,5 +53,15 @@
 @media screen and (min-width: 500px) {
     #music .signature img {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    #music section {
+        width: 75%;
+    }
+    #music .soundcloud-container {
+        width: 75%;  
+        // height: 100px;
     }
 }

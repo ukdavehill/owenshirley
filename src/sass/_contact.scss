@@ -32,8 +32,11 @@
         // margin-top: -80px;
         
         padding: 30px;
+        // border: 1px solid #999;
+        // border-radius: 2%;
+        // box-shadow: 1px 1px 1px black;
+        // margin: 0 5px;
         
-        // background-color: $grey;
     }
     section p {
         display: block;
@@ -54,7 +57,7 @@
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
     #contact section {
         border: 1px solid #999;
         border-radius: 2%;

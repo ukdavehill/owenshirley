@@ -26,12 +26,7 @@
             height: auto;
             width: $menu-width;
         }
-        // ASK OWEN ABOUT THIS...
-        // img:hover {
-        //   transform: scale(1.05);
-        //   background-color: red;
-        // }
-
+        
         
             
     }
@@ -103,6 +98,7 @@
           // opacity: 0.6;
           transition: 0.4s;
           color: black;
+          
           
           &:hover {
             color: $grey;
