@@ -358,7 +358,8 @@ function getClickedElement(el) {
 //}
 
 function aboutToDropdown(e) {
-    if (!e.target.matches('#page-message') && !e.target.parentElement.matches('#page-message')) {
+    if (!e.target.matches('#page-message') && !e.target.parentElement.matches('#page-message') && !e.target.matches('a')) {
+
         e.preventDefault();
         getClickedElement(e);
         if (toggleItem) {
@@ -370,7 +371,6 @@ function aboutToDropdown(e) {
 }
 
 function dropDown(e) {
-
 
     getClickedElement(e);
     // console.dir(toggleItem);
@@ -390,19 +390,7 @@ function dropDown(e) {
 videoArea.addEventListener('mousedown', aboutToDropdown);
 videoArea.addEventListener('mouseup', dropDown);
 
-// DO THE SAME WITH CLICKING???
-// videoArea.addEventListener('touchstart', e => {
-//     // dropDown(e);
-//     e.preventDefault();
-//     getClickedElement(e);
-//     if (toggleItem) {
-//         toggleItem.classList.toggle('touched');
-//     }
-//     e.stopPropagation();
-// });
-
 videoArea.addEventListener('touchstart', aboutToDropdown);
-
 videoArea.addEventListener('touchend', dropDown);
 
 // videoArea.addEventListener('click', (e) => {
