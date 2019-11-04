@@ -168,6 +168,7 @@ span.invisible {
     // border: $border-width solid black;
     // margin-left: 8px;
     align-items: center;
+    justify-content: center;
     // pointer-events: none;
     
     h3 {
@@ -195,7 +196,8 @@ span.invisible {
       margin-top: 10px;
       height: auto;
       align-self: center;
-      min-width: 211px;
+      min-width: 225px;
+      max-width: 400px;
     }
     #mobile-img {
       width: 10%;
@@ -234,4 +236,10 @@ span.invisible {
 
   .hovered {
     background-color: pink;
+  }
+
+  @media screen and (max-width: 225px){
+    #page-message img {
+      display: none;
+    }
   }
