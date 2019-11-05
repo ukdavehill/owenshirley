@@ -84,27 +84,87 @@
         justify-self: center;
         width: $div-width;
         
+        // #first-row {
+        //   justify-content: center;
+        // }
+
+        // #second-row {
+        //   justify-content: space-around;
+        // }
+
+        // #centred {
+        //   justify-self: center;
+        // }
+
         .icons {
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
+          
           width: 100%;
           margin-bottom: 15px;
-        }
         
-        i {
-          // display: inline-block;
-          // padding: 5px;
-          font-size: 25px;
-          // opacity: 0.6;
-          transition: 0.4s;
-          color: black;
+          // a {
+          //   flex-basis: 50%;
+          //   display: block;
+          // }
           
-          
-          &:hover {
-            color: $grey;
-            opacity: 1;
+
+          i {
+            // display: inline-block;
+            // padding: 5px;
+            font-size: 25px;
+            // opacity: 0.6;
             transition: 0.4s;
-            cursor: pointer;
+            color: black;            
+            
+            &:hover {
+              color: $grey;
+              opacity: 1;
+              transition: 0.4s;
+              cursor: pointer;
+            }
           }
-        }
+        }   
+
+        .icons-new {
+          display: flex;
+          justify-content: center;          
+          width: 100%;
+          margin-bottom: 15px;
+        
+          // a {
+          //   flex-basis: 50%;
+          //   display: block;
+          // }
+          
+          .icon {
+            width: 40%;
+            display: flex;
+          }
+          a {
+            // display: block;
+          }
+          .first-row {
+            justify-content: flex-start;
+          }
+
+          .second-row {
+            justify-content: flex-end;
+          }
+          i {
+            // display: inline-block;
+            // padding: 5px;
+            font-size: 25px;
+            // opacity: 0.6;
+            transition: 0.4s;
+            color: black;            
+            
+            &:hover {
+              color: $grey;
+              opacity: 1;
+              transition: 0.4s;
+              cursor: pointer;
+            }
+          }
+        }   
     }
